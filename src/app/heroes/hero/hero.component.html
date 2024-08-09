@@ -1,11 +1,11 @@
-<h1>Spiderman</h1>
+<h1>{{name}}</h1>
 
 <dl>
     <td>Nombre:</td>
-    <dd> nombre</dd>
+    <dd> {{name}}</dd>
 
     <td>Edad:</td>
-    <dd> edad</dd>
+    <dd> {{age}}</dd>
 
     <td>Metodo:</td>
     <dd> metodo</dd>
@@ -15,10 +15,13 @@
 </dl>
 
 
-<button class="btn btn-primary mx-2">
-    Cambiar Nombre
+<button
+*ngIf="name !== 'Spiderman'" 
+(click)="changeHero()"
+class="btn btn-primary mx-2">
+    Cambiar Nombre 
 </button>
 
-<button class="btn btn-primary">
+<button (click)="changeAge()" class="btn btn-primary">
     Cambiar Edad
 </button>

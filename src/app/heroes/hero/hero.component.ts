@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class HeroComponent {
 
+  public name : string = 'Ironman'
+  public age: number = 32
+
+
+  changeHero(): void{
+    this.name = 'Spiderman'
+  }
+
+  changeAge(): void {
+    this.age = 45
+  }
+
+
 }
